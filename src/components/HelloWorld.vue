@@ -15,14 +15,6 @@
       </div>
     </div>
     <div class="humidity" v-if="Json_OW_CurrentLocation.data">湿度{{ Json_OW_CurrentLocation.data.main.humidity }}%</div>
-
-    <!--
-    <p v-if="Json_OW_CurrentLocation.data">現在の天気は、{{ Json_OW_CurrentLocation.data.weather[0].main }}です。</p>
-    <p v-if="Json_OW_CurrentLocation.data">現在の温度は、{{ Json_OW_CurrentLocation.data.main.temp }}°Cです。</p>
-    <p v-if="Json_OW_CurrentLocation.data">現在の湿度は、{{ Json_OW_CurrentLocation.data.main.humidity }}°Cです。</p>
-    <p v-if="Json_OW_CurrentLocation.data">最高気温は、{{ Json_OW_CurrentLocation.data.main.temp_max }}°Cです。</p>
-    <p v-if="Json_OW_CurrentLocation.data">最低気温は、{{ Json_OW_CurrentLocation.data.main.temp_min }}°Cです。</p>
-    -->
   </div>
 </template>
 
@@ -45,11 +37,6 @@
     },
     created() {
       this.get_OW_CurrentLocation_Json();
-
-      /*
-      const unixTime = new Date(this.Json_OW_CurrentLocation.data)
-      console.log(unixTime)
-      */
     },
     methods: {
       get_Current_Location() {
@@ -133,11 +120,12 @@
       margin: 0 auto;
     }
   }
-  .temp{
+
+  .temp {
     margin-bottom: 50px;
   }
 
-  .flexBox{
+  .flexBox {
     display: flex;
     justify-content: center;
     gap: 50px;
